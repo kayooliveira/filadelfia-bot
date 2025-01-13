@@ -59,7 +59,7 @@ createCommand({
         await guildMember.roles.add('1327704525582241907')
 
         await user.send({ embeds: [embed] }).catch(()=>{
-            interaction.reply({ content: 'Não foi possível enviar a mensagem ao usuário', ephemeral: true });
+            console.log('Erro ao enviar mensagem para o usuário')
         })
 
         return await interaction.reply({ embeds: [embed] });
