@@ -39,7 +39,7 @@ createCommand({
 
             Estamos à disposição para esclarecer qualquer dúvida e desejamos sucesso em sua jornada conosco!
 
-            Aprovado por: @${interaction.user.id}
+            Aprovado por: <@${interaction.user.id}>
             `,
             color: Colors.Purple,
             image:{

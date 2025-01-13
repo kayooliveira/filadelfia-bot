@@ -57,7 +57,7 @@ createCommand({
 
             Agradecemos por seu interesse e desejamos sucesso em seus projetos futuros!
 
-            Reprovado por: @${interaction.user.id}
+            Reprovado por: <@${interaction.user.id}>!
             `,
             color: Colors.Purple,
             image:{
