@@ -56,6 +56,8 @@ createCommand({
             Você ainda pode preencher o formulário novamente acessando o link no canal https://discord.com/channels/859859639419142144/1327717813913255936, caso deseje tentar novamente.
 
             Agradecemos por seu interesse e desejamos sucesso em seus projetos futuros!
+
+            Reprovado por: @${interaction.user.id}
             `,
             color: Colors.Purple,
             image:{

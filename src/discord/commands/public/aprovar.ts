@@ -38,6 +38,8 @@ createCommand({
             Após esta etapa, pedimos que acesse o canal https://discord.com/channels/859859639419142144/1170773626723778690 e siga cuidadosamente as orientações descritas para continuar o procedimento.
 
             Estamos à disposição para esclarecer qualquer dúvida e desejamos sucesso em sua jornada conosco!
+
+            Aprovado por: @${interaction.user.id}
             `,
             color: Colors.Purple,
             image:{
