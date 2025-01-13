@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: testebot
+      MYSQL_DATABASE: testebot
+      MYSQL_USER: testebot
+      MYSQL_PASSWORD: testebot
+    ports:
+      - "3344:3306"
+    volumes:
+      - .docker/db:/var/lib/mysql
