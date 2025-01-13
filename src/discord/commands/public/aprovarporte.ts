@@ -98,11 +98,11 @@ createCommand({
         if(arquivo) {
           embed.addFields([
             {
-              name: `Certificado ${nome}`,
-              value: `[Certificado do Exame Psicotécnico ${nome}](${arquivo.url})`,
+              name: `Certificado do Exame Psicotécnico ${nome}`,
+              value: `[Baixar](${arquivo.url})`,
             }
           ]);
         }
-        return interaction.reply({ embeds: [embed], });
+        return interaction.reply({ embeds: [embed] });
     }
 });
