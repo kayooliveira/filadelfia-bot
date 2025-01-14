@@ -3,8 +3,7 @@ import {
   ApplicationCommandType,
   ApplicationCommandOptionType,
 } from "discord.js";
-import { curso } from "functions/resultado/curso.js";
-import { porte } from "functions/resultado/porte.js";
+import { curso,porte } from "#functions";
 
 
 createCommand({
