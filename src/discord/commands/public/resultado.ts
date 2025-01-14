@@ -88,6 +88,12 @@ createCommand({
                 required: true
             },
             {
+                name: 'crm',
+                description: 'CRM/Passaporte do usuário',
+                type: ApplicationCommandOptionType.String,
+                required: true
+            },
+            {
                 name: 'cargo',
                 description: 'Cargo atual do usuário',
                 type: ApplicationCommandOptionType.Role,
@@ -114,7 +120,13 @@ createCommand({
                         value: 'REPROVADO',
                     }
                 ]
-            }
+            },
+            {
+                name: 'cargocurso',
+                description: 'Cargo pra adicionar ao usuário',
+                type: ApplicationCommandOptionType.Role,
+                required: true
+            },
         ]
     }
   ],
@@ -132,7 +144,7 @@ createCommand({
         case 'porte':
             return interaction.reply(porte(options,user))
         case 'curso':
-            return interaction.reply(curso(options,user))
+            return interaction.reply(curso(options,user,guild))
         default: 
             return interaction.reply({content: 'Comando inválido', ephemeral: true})
     }
