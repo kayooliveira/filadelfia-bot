@@ -85,16 +85,19 @@ createCommand({
                 name: 'usuario',
                 description: 'Usuário que realizou o curso',
                 type: ApplicationCommandOptionType.User,
+                required: true
             },
             {
                 name: 'cargo',
                 description: 'Cargo atual do usuário',
                 type: ApplicationCommandOptionType.Role,
+                required: true
             },
             {
                 name: 'curso',
                 description: 'Curso realizado',
                 type: ApplicationCommandOptionType.Role,
+                required: true
             },
             {
                 name: 'status',
