@@ -42,8 +42,7 @@ createCommand({
     const usuario = options.getUser("usuario", true);
     const cargoAntigo = options.getRole("cargoantigo", true);
     const cargoNovo = options.getRole("cargonovo", true);
-
-    const passaporte = usuario.displayName.split("|")[1].trim();
+    const passaporte = usuario.username.split("|")[1].trim();
 
 
     const embed = createEmbed({
