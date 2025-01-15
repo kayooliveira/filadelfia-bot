@@ -67,7 +67,7 @@ createCommand({
       author: createEmbedAuthor(user),
       title: "Promoção de cargo",
       description: `
-          **Nome**: ${usuario.id}
+          **Nome**: ${usuario}
           **Passaporte**: ${passaporte}
           **Cargo antigo**: ${cargoAntigo}
           **Cargo novo**: ${cargoNovo}  
