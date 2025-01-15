@@ -42,9 +42,27 @@ createCommand({
     const usuario = options.getUser("usuario", true);
     const cargoAntigo = options.getRole("cargoantigo", true);
     const cargoNovo = options.getRole("cargonovo", true);
-    const passaporte = usuario.username.split("|")[1].trim();
+    const member = await guild.members.fetch(usuario.id);
+    const memberName = member.nickname || usuario.username
+
+    const passaporte =  memberName.split(' | ')?memberName.split(' | ')[1]:null
+    
+    if(!passaporte){
+      return interaction.reply({
+        content: "O nome do usuário deve estar no formato [CARGO] - [NOME] [SOBRENOME] | [PASSAPORTE]",
+        ephemeral: true,
+      });
+    }
 
 
+    if (!member) {
+      return interaction.reply({
+        content: "Usuário não encontrado",
+        ephemeral: true,
+      });
+    }
+
+    console.log(member)
     const embed = createEmbed({
       author: createEmbedAuthor(user),
       title: "Promoção de cargo",
@@ -58,14 +76,7 @@ createCommand({
       `
     })
 
-    const member = await guild.members.fetch(usuario.id);
 
-    if (!member) {
-      return interaction.reply({
-        content: "Usuário não encontrado",
-        ephemeral: true,
-      });
-    }
 
     if (!member.roles.cache.has(cargoAntigo.id)) {
       return interaction.reply({
