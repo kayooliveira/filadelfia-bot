@@ -3,9 +3,8 @@ import {
   ApplicationCommandType,
   ApplicationCommandOptionType,
 } from "discord.js";
-import { curso,porte } from "#functions";
+import { curso,porte,especializacao } from "#functions";
 import { courses,specializations } from "#consts";
-import { especializacao } from "functions/resultado/especializacao.js";
 
 
 createCommand({
