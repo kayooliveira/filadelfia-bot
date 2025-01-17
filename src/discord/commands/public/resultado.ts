@@ -4,6 +4,9 @@ import {
   ApplicationCommandOptionType,
 } from "discord.js";
 import { curso,porte } from "#functions";
+import { courses } from "consts/courses.js";
+import { specializations } from "consts/specializations.js";
+import { especializacao } from "functions/resultado/especializacao.js";
 
 
 createCommand({
@@ -88,22 +91,17 @@ createCommand({
                 required: true
             },
             {
-                name: 'crm',
-                description: 'CRM/Passaporte do usuário',
-                type: ApplicationCommandOptionType.String,
-                required: true
-            },
-            {
                 name: 'cargo',
                 description: 'Cargo atual do usuário',
-                type: ApplicationCommandOptionType.Role,
+                type: ApplicationCommandOptionType.String,
                 required: true
             },
             {
                 name: 'curso',
                 description: 'Curso realizado',
-                type: ApplicationCommandOptionType.Role,
-                required: true
+                type: ApplicationCommandOptionType.String,
+                required: true,
+                choices: courses
             },
             {
                 name: 'status',
@@ -128,6 +126,54 @@ createCommand({
                 required: true
             },
         ]
+    },
+    {
+      name: 'especializacao',
+      description: 'Resultado de uma especialização',
+      type: ApplicationCommandOptionType.Subcommand,
+      options: [
+        {
+          name: 'usuario',
+          description: 'Usuário que realizou a especialização',
+          type: ApplicationCommandOptionType.User,
+          required: true
+        },
+        {
+          name: 'cargo',
+          description: 'Cargo atual do usuário',
+          type: ApplicationCommandOptionType.String,
+          required: true
+        },
+        {
+          name: 'especializacao',
+          description: 'Especialização realizada',
+          type: ApplicationCommandOptionType.String,
+          required: true,
+          choices: specializations
+        },
+        {
+          name: 'status',
+          description: 'Status da especialização',
+          type: ApplicationCommandOptionType.String,
+          required: true,
+          choices: [
+            {
+              name: 'Aprovado ✅',
+              value: 'APROVADO',
+            },
+            {
+              name: 'Reprovado ❌',
+              value: 'REPROVADO',
+            }
+          ]
+        },
+        {
+          name: 'cargoespecializacao',
+          description: 'Cargo pra adicionar ao usuário',
+          type: ApplicationCommandOptionType.Role,
+          required: true
+        },
+      ]
     }
   ],
   async run(interaction) {
@@ -145,6 +191,8 @@ createCommand({
             return interaction.reply(porte(options,user))
         case 'curso':
             return interaction.reply(curso(options,user,guild))
+        case 'especializacao':
+          return interaction.reply(especializacao(options,user,guild))
         default: 
             return interaction.reply({content: 'Comando inválido', ephemeral: true})
     }

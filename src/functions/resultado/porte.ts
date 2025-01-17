@@ -27,7 +27,7 @@ export function porte<R>(options:Omit<CommandInteractionOptionResolver<'cached'>
 
           STATUS: APROVADO ✅
           `,
-    color: "#00ff00",
+    color: "#ff66c4",
   });
 
   if (arquivo) {

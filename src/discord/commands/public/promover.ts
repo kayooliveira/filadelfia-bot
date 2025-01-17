@@ -69,11 +69,12 @@ createCommand({
       description: `
           **Nome**: ${usuario}
           **Passaporte**: ${passaporte}
-          **Cargo antigo**: ${cargoAntigo}
-          **Cargo novo**: ${cargoNovo}  
+          **Cargo antigo**: ${cargoAntigo.name}
+          **Cargo novo**: ${cargoNovo.name}  
 
           **Promovido por**: ${user}
-      `
+      `,
+      color: '#ff66c4'
     })
 
 

@@ -41,7 +41,7 @@ createCommand({
 
             Aprovado por: <@${interaction.user.id}>
             `,
-            color: Colors.Purple,
+            color: '#ff66c4',
             image:{
                 url: 'https://i.imgur.com/OvNzaZK.png',
             },
