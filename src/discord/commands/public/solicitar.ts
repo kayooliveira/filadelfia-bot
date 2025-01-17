@@ -10,9 +10,6 @@ createCommand({
   name: "solicitar",
   description: "Comando para solicitar cursos, exames entre outros 📋",
   type: ApplicationCommandType.ChatInput,
-  defaultMemberPermissions: [
-    'SendMessages',
-  ],
   options: [
     {
       name: "curso",

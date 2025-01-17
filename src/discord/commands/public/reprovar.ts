@@ -6,6 +6,9 @@ createCommand({
     name: 'reprovar',
     description: 'Reprova um usuário do edital 🧾!',
     type: ApplicationCommandType.ChatInput,
+    defaultMemberPermissions: [
+        'ChangeNickname'
+    ],
     options: [
         {
             name: 'usuário',

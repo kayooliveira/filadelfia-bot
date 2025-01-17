@@ -9,6 +9,9 @@ createCommand({
   name: "promover",
   type: ApplicationCommandType.ChatInput,
   description: "Promover usuário",
+  defaultMemberPermissions: [
+    'ChangeNickname'
+],
   options: [
     {
       name: "usuario",

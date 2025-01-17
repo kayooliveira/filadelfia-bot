@@ -6,6 +6,9 @@ import { ApplicationCommandOptionType, ApplicationCommandType, InteractionContex
 createCommand({
     name: 'aprovar',
     description: 'Aprova um usuário do edital 🧾!',
+    defaultMemberPermissions: [
+        'ChangeNickname'
+    ],
     type: ApplicationCommandType.ChatInput,
     options: [
         {

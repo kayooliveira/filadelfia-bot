@@ -11,6 +11,9 @@ createCommand({
   name: "resultado",
   description: "Enviar resultado de um curso ou exame",
   type: ApplicationCommandType.ChatInput,
+  defaultMemberPermissions: [
+    'ChangeNickname'
+  ],
   options: [
     {
       name: "porte",
