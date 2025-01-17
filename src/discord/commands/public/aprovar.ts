@@ -1,6 +1,6 @@
 import { createCommand } from "#base";
 import { createEmbed } from "@magicyan/discord";
-import { ApplicationCommandOptionType, ApplicationCommandType,  Colors, InteractionContextType } from "discord.js";
+import { ApplicationCommandOptionType, ApplicationCommandType, InteractionContextType } from "discord.js";
 
 
 createCommand({
