@@ -32,6 +32,7 @@
 			"#menus": ["./menus/index.ts"],
 			"#settings": ["./settings/index.ts"],
 			"#tools": ["./tools/index.ts"],
+			"#consts": ["./consts/index.ts"],
 			"#server": ["./server/index.ts"],
 			"#lib": ["./lib/index.ts"],
 			"#emojis": ["../emojis.json"],

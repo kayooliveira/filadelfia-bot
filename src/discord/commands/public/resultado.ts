@@ -4,8 +4,7 @@ import {
   ApplicationCommandOptionType,
 } from "discord.js";
 import { curso,porte } from "#functions";
-import { courses } from "consts/courses.js";
-import { specializations } from "consts/specializations.js";
+import { courses,specializations } from "#consts";
 import { especializacao } from "functions/resultado/especializacao.js";
 
 

@@ -49,6 +49,9 @@
     "#tools": [
       "./build/tools/index.js"
     ],
+    "#consts": [
+      "./build/consts/index.js"
+    ],
     "#server": [
       "./build/server/index.js"
     ],

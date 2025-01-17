@@ -1,7 +1,6 @@
 import { createCommand } from "#base";
 import { createEmbed, createEmbedAuthor } from "@magicyan/discord";
-import { courses } from "consts/courses.js";
-import { specializations } from "consts/specializations.js";
+import { courses,specializations } from "#consts"
 import {
   ApplicationCommandOptionType,
   ApplicationCommandType,
