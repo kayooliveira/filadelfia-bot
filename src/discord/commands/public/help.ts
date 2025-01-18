@@ -41,7 +41,8 @@ createCommand({
               name: '/resultado',
               value: 'Lançar um resultado de curso, especialização ou exame ex: Psicotécnico',
             },
-          ]
+          ],
+          color: '#ff66c4'
         });  
 
         return interaction.reply({embeds:[embed],ephemeral:true})
