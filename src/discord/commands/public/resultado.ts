@@ -27,20 +27,14 @@ createCommand({
           required: true,
         },
         {
-          name: "passaporte",
-          description: "Número do passaporte",
-          type: ApplicationCommandOptionType.String,
-          required: true,
-        },
-        {
           name: "registro",
-          description: "Número do registro",
+          description: "Número do registro do cidadão",
           type: ApplicationCommandOptionType.String,
           required: true,
         },
         {
           name: "numero",
-          description: "Número do porte",
+          description: "Número de telefone do cidadão",
           type: ApplicationCommandOptionType.String,
           required: true,
         },
@@ -189,7 +183,7 @@ createCommand({
 
     switch (options.getSubcommand()){
         case 'porte':
-            return interaction.reply(porte(options,user))
+            return interaction.reply(porte(options,user,guild))
         case 'curso':
             return interaction.reply(curso(options,user,guild))
         case 'especializacao':

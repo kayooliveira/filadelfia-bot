@@ -1,10 +1,12 @@
 import { createEmbed } from "@magicyan/discord";
-import { CommandInteractionOptionResolver,  InteractionReplyOptions, User } from "discord.js";
+import { CommandInteractionOptionResolver,  Guild,  InteractionReplyOptions, User } from "discord.js";
 
-export function porte<R>(options:Omit<CommandInteractionOptionResolver<'cached'>, 'getMessage' | 'getFocused'> ,user:User):R {
+export function porte<R>(options:Omit<CommandInteractionOptionResolver<'cached'>, 'getMessage' | 'getFocused'> ,user:User,guild:Guild):R {
 
   const nome = options.getString("nome", true);
-  const passaporte = options.getString("passaporte", true);
+  const member = guild.members.cache.get(user.id);
+  const username = member?.nickname || user.username;
+  const passaporte = username.split(" | ") ? username.split(" | ")[1] : null;
   const registro = options.getString("registro", true);
   const numero = options.getString("numero", true);
   const necessidade = options.getString("necessidade", true);

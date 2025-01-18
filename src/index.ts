@@ -9,7 +9,7 @@ export const client = await bootstrap({
   presence: {
     status: 'online',
     activities: [
-      {name: 'Filadélfia City',state: 'Recrutamento de Médicos',type: ActivityType.Playing}
+      {name: 'Filadélfia City',state: '/help',type: ActivityType.Playing}
     ],
   },
 });
