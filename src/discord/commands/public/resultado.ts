@@ -189,7 +189,7 @@ createCommand({
 
     switch (options.getSubcommand()){
         case 'porte':
-            return interaction.reply(porte(options,user,guild))
+            return interaction.reply(porte(options,user))
         case 'curso':
             return interaction.reply(curso(options,user,guild))
         case 'especializacao':
