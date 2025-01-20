@@ -5,8 +5,7 @@ export function porte<R>(options:Omit<CommandInteractionOptionResolver<'cached'>
 
   const nome = options.getString("nome", true);
   const member = guild.members.cache.get(user.id);
-  const username = member?.nickname || user.username;
-  const passaporte = username.split(" | ") ? username.split(" | ")[1] : null;
+  const passaporte = options.getString("passaporte",true)
   const registro = options.getString("registro", true);
   const numero = options.getString("numero", true);
   const necessidade = options.getString("necessidade", true);

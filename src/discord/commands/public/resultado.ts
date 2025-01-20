@@ -27,6 +27,12 @@ createCommand({
           required: true,
         },
         {
+          name: "passaporte",
+          description: "Passaporte do cidadão",
+          type: ApplicationCommandOptionType.String,
+          required:true,
+        },
+        {
           name: "registro",
           description: "Número do registro do cidadão",
           type: ApplicationCommandOptionType.String,
