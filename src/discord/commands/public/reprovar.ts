@@ -79,7 +79,7 @@ createCommand({
         const guildMember = await guild.members.fetch(user.id);
 
         await user.send({ embeds: [embed] }).catch(()=>{
-            interaction.reply({ content: 'Não foi possível enviar a mensagem ao usuário', ephemeral: true });
+            console.log('Erro ao enviar mensagem privada para o usuário')
         })
 
         await guildMember.roles.remove('1327704525582241907')

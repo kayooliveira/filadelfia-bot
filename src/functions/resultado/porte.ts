@@ -1,5 +1,5 @@
 import { createEmbed } from "@magicyan/discord";
-import { CommandInteractionOptionResolver,  InteractionReplyOptions, User } from "discord.js";
+import { CommandInteractionOptionResolver, InteractionReplyOptions, User } from "discord.js";
 
 export function porte<R>(options:Omit<CommandInteractionOptionResolver<'cached'>, 'getMessage' | 'getFocused'> ,user:User):R {
 
