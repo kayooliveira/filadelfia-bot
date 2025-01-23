@@ -1,5 +1,17 @@
 export const specializations = [
   {
+    name: "Treinador Autorizado Externo 🏥",
+    value: "Treinador Autorizado Externo 🏥"
+  },
+  {
+    name: "Treinador Rádio Modulação 📻",
+    value: "Treinador Rádio Modulação 📻"
+  },
+  {
+    name: "Treinador Helicóptero 🚁",
+    value: "Treinador Helicóptero 🚁"
+  },
+  {
     name: 'Farmacologia 🧪',
     value: 'Farmacologia 🧪'
   },
