@@ -19,15 +19,23 @@ createCommand({
         // The members has the following pattern to nicknames = "ROLE - Name | ID" except the responsibles that dont need to be in the list.
         // This command should return an embed with the list of members that need to be updated.
 
-        const membersWithIds = guild.members.cache.filter(member =>  member.nickname?.includes('|') && !member.roles.cache.has('859879734581788695')).map(member => {
-            const [role, name] = member.nickname ? member.nickname.split(' | '): ['', ''];
-            return {role, name, id: member.id};
+        const membersWithIds = guild.members.cache.filter(member => {
+            return member.nickname && member.nickname.includes('|');
+        }).map(member => {
+            const [role, name, id] = member.nickname?.split(' | ') || [];
+            if (!role || !name || !id) return null;
+            return {
+                role,
+                name,
+                id,
+            };
         });
 
         const embed = createEmbed({
           author: createEmbedAuthor(user),
             title: 'Ids atualizados dos membros do HP',
             description: membersWithIds.map(member => {
+              if(!member) return null;
                 return `${member.role} - ${member.name} | ${member.id}`;
             }).join('\n'),
             color: '#ff66c4',
