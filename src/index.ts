@@ -4,7 +4,8 @@ import { ActivityType } from "discord.js";
 export const client = await bootstrap({ 
   meta: import.meta,
   intents: [
-    'Guilds'
+    'Guilds',
+    'GuildMembers'
   ],
   presence: {
     status: 'online',
