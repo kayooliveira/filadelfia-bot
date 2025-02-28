@@ -23,3 +23,5 @@
 *.development.json
 
 .docker/*
+
+discloud.config
