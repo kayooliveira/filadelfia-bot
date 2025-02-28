@@ -22,3 +22,8 @@ database
 *.development.json
 *.dev.json
 
+.cache
+.docker
+./src
+docker-compose.yml
+README.md
